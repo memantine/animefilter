@@ -23,6 +23,21 @@ window.addEventListener('load', function() {
           }
         }
       });
+      document.querySelectorAll(".hoverinfo_trigger").forEach(function(link) {
+        if (userList.includes(link.textContent)) {
+          let target = link;
+          for (let i = 0; i < 5; i++) {
+            if (target && target.parentNode) {
+              target = target.parentNode;
+            } else {
+              break;    //if the target isn't on the page resume script
+            }
+          }
+          if (target && target.parentNode) {
+            target.parentNode.removeChild(target);
+          }
+        }
+      });
       popList();
     });
 });
@@ -130,3 +145,12 @@ function popList() {
     userListElements.push(li);
   });
 }
+document.querySelectorAll(".hoverinfo_trigger").forEach(function(link) {
+  link.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+    clickedElement = event.target;
+    slopMenu.style.left = (event.pageX + 20) + 'px';
+    slopMenu.style.top = event.pageY + 'px';
+    slopMenu.style.display = 'block';
+  });
+});
