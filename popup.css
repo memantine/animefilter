@@ -1,0 +1,63 @@
+body {
+    background-color: black;
+    color: white;
+    width: 750px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.title {
+    text-align: center;
+    flex: 0 0 auto; 
+}
+
+
+.user-list {
+    flex: 1 1 auto; 
+    width: 100%;
+    overflow-y: auto; 
+    text-align: center;
+}
+
+
+#custom-menu {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+
+}
+
+
+#menuButton {
+    width: 200px;
+    height: 200px;
+    background-image: url("icons/image.png");
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+}
+
+
+li {
+    padding-bottom: 5px;
+    padding-right: 10px;
+    list-style-type: hiragana;
+    text-decoration: underline;
+}
+
+
+.remove-btn {
+    margin-left: 20px;
+    color: rgb(255, 255, 255); 
+    line-height: 11px; 
+    padding: 10px; 
+    border-radius: 10px; 
+    background-image: linear-gradient(135deg, rgb(164, 58, 16) 0%, rgb(203, 12, 10) 50%, rgb(117, 43, 15) 100%);
+    box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
+    border: 2px solid rgb(28, 110, 164); 
+    display: inline-block;
+}
