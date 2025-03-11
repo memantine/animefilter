@@ -23,7 +23,7 @@ window.addEventListener('load', function() {
           }
         }
       });
-      document.querySelectorAll(".hoverinfo_trigger").forEach(function(link) {
+      document.querySelectorAll("a.hover-info_trigger:not(.mr8)").forEach(function(link) {
         if (userList.includes(link.textContent)) {
           let target = link;
           for (let i = 0; i < 5; i++) {
@@ -145,7 +145,7 @@ function popList() {
     userListElements.push(li);
   });
 }
-document.querySelectorAll(".hoverinfo_trigger").forEach(function(link) {
+document.querySelectorAll("a.hoverinfo_trigger:not(.mr8)").forEach(function(link) {
   link.addEventListener('contextmenu', function(event) {
     event.preventDefault();
     clickedElement = event.target;
