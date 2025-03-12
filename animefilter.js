@@ -108,8 +108,12 @@ function addToList() {
 document.addEventListener('click', function(event) {
   if (!slopMenu.contains(event.target)) {
     slopMenu.style.display = "none";
+  } else if (slopMenu.contains(event.target)) {
+    return;
   }
 });
+
+
 // repopulate userlist when a change occurs
 function popList() {
   ulList = document.getElementById("slop-list");
